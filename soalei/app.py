@@ -12,9 +12,11 @@ def index():
 
 @app.route('/reveal', methods=['POST'])
 def reveal():
-    # 获取前端传来的行列信息
-    row = int(request.form['row'])
-    col = int(request.form['col'])
+    data = request.get_json()
+    if not data:
+        return jsonify({'error': 'Invalid data'}), 400
+    row = int(data['row'])
+    col = int(data['col'])
     
     # 执行揭示格子操作
     result = game.reveal(row, col)
@@ -34,8 +36,11 @@ def reveal():
 
 @app.route('/flag', methods=['POST'])
 def flag():
-    row = int(request.form['row'])
-    col = int(request.form['col'])
+    data = request.get_json()  # 获取 JSON 数据
+    if not data:
+        return jsonify({'error': 'Invalid data'}), 400
+    row = int(data['row'])
+    col = int(data['col'])
     
     game.toggle_flag(row, col)
     
