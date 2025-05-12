@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Minesweeper</h1>
+    <div id="status"></div>
+    <table id="board">
+        <!-- 棋盘将通过 JavaScript 动态生成 -->
+    </table>
+    <button id="resetButton">Reset Game</button>
+
+    <script src="static/script.js"></script>
+</body>
+</html>

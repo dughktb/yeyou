@@ -1,0 +1,21 @@
+/* 简单的棋盘样式 */
+#board {
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#board td {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+#board td.flagged {
+    background-color: yellow;
+}
+
+button {
+    margin-top: 20px;
+}

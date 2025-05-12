@@ -1,0 +1,7 @@
+minesweeper/
+├── app.py                 # Flask 后端
+├── static/
+│   └── script.js          # JavaScript 前端逻辑
+├── templates/
+│   └── index.html         # 主页面
+└── game.py                # 扫雷游戏逻辑 下一步
